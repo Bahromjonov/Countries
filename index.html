@@ -2,15 +2,13 @@
 <html lang="uz">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countries</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-
   <!-- Header -->
   <div class="header-bg ">
     <header class="container headerr">
@@ -26,94 +24,31 @@
       </button>
     </header>
   </div>
+  <!-- Main -->
+  <main class="container">
+    <div class=" hero">
+      <!-- Search -->
+      <label class="hero-search">
+        <img class="search-icon" src="./img/search.svg" alt="search icon">
+        <input class="search" type="search" placeholder="Search for a country…">
+      </label>
+      <!-- Hero select -->
+      <select class="hero-select">
+        <option class="option" disabled selected value="Filter">Filter by Region</option>
+        <option  class="option" value="Africa">Africa</option>
+        <option class="option" value="America">America</option>
+        <option class="option" value="Asia">Asia</option>
+        <option class="option" value="Europe">Europe</option>
+        <option class="option" value="Oceania">Oceania</option>
+      </select>
+    </div>
+    <div>
+      <ul class="list  item">
 
-  <!-- Hero -->
-  <section >
-  
-  </section>
-
- <!-- Main -->
-<main class="container">
-<div class=" hero">
-  <!-- Search -->
-  <label class="hero-search">
-    <img class="search-icon" src="./img/search.svg" alt="search icon">
-    <input class="search" type="search" placeholder="Search for a country…">
-  </label>
-  <!-- Hero select -->
-  <select class="hero-select">
-    <option disabled selected value="Filter">Filter by Region</option>
-    <option  value="Africa">
-    Africa 
-    </option>
-    <option  value="America">
-    America </option>
-    <option  value="Asia">
-    Asia
-    </option>
-    <option  value="Europe">
-    Europe
-    </option>
-    <option  value="Oceania">
-    Oceania
-    </option>
-  </select>
-</div>
-
-<div>
-    <ul class="list  item">
-    
-    </ul>
-
-</div>
-
-</main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <div class="container al">
-    <div class="top">
-        <h1 class="state ">Where in the world?</h1>  -->
-    <!-- Dark mode -->
-    <!-- <button  class="dark-mode">Dark mode</button> -->
-    <!-- hamburger
-        <button class="hamburger hidden">
-            <img  src="./img/hamburger-svg.png" alt="hamburger icon" width="30" height="30">
-        </button>
-    </div> -->
-    <!-- Search vs states -->
-    <!-- <div class="qidiruv">
-            <input id="search-input" class=" search-item" type="search" name="state"
-                placeholder="Qidirmoqchi bolgan davlatlaringizni kirirting ...">
-            <div class="btns">
-                <button class="asia-btn" id="asia-btn">Asia</button>
-                <button class="asia-btn" id="europe-btn">Europe</button>
-                <button class="asia-btn" id="all-btn">All Countries</button>
-            </div>
-            <p class="common-state" id="total"></p>
-        </div>
-
-        <ul class="list  item">
-
-        </ul>
-    </div>  -->
-
-
-
-
-
-    <script src="./app.js"></script>
+      </ul>
+    </div>
+  </main>
+  <script src="./app.js"></script>
 </body>
 
 </html>

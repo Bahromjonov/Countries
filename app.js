@@ -38,6 +38,7 @@ const showCountries = (countries) => {
     const flagImg = document.createElement('img');
     flagImg.src = country.flags.svg;
     flagImg.alt = `${country.name.common} flag`;
+    flagImg.style.borderTopRadius = '8px';
     flagImg.style.width = '100%';
     flagDiv.appendChild(flagImg);
     li.appendChild(flagDiv);
@@ -46,6 +47,7 @@ const showCountries = (countries) => {
     infoDiv.classList.add('info');
     infoDiv.style.paddingBottom = '46px';
     infoDiv.style.paddingLeft = '24px';
+    infoDiv.style.borderRadius = '8px';
     li.appendChild(infoDiv);
 
     const countryName = document.createElement('h3');
@@ -117,4 +119,5 @@ elDarkMode.addEventListener('click', () => {
   elSearch.classList.toggle('search-bg');
   elRegionSelect.classList.toggle('dark-mode');
   elDarkMode.classList.toggle('dark-mode');
+  infoDiv.classList.toggle('search-bg ')
 });
