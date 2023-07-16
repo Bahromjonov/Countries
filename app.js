@@ -125,7 +125,6 @@ elDarkMode.addEventListener('click', () => {
 });
 
 
-
 btn.addEventListener('scroll', () =>{
     if(this.window.scrollY > 500){
         btn.style.display = 'block'
