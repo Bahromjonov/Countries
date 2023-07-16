@@ -8,9 +8,10 @@
   <title>Countries</title>
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <!-- Header -->
-  <div class="header-bg ">
+  <div class="header-bg sticky">
     <header class="container headerr">
       <!-- Header logo -->
       <div>
@@ -22,20 +23,21 @@
         <img style="color: black;" src="./img/oy.svg" alt="oy icon" width="20" height="20">
         Dark Mode
       </button>
+      
     </header>
   </div>
   <!-- Main -->
   <main class="container">
-    <div class=" hero">
+    <div class="hero">
       <!-- Search -->
-      <label class="hero-search">
+      <label class="hero-search ">
         <img class="search-icon" src="./img/search.svg" alt="search icon">
         <input class="search" type="search" placeholder="Search for a country…">
       </label>
       <!-- Hero select -->
       <select class="hero-select">
         <option class="option" disabled selected value="Filter">Filter by Region</option>
-        <option  class="option" value="Africa">Africa</option>
+        <option class="option" value="Africa">Africa</option>
         <option class="option" value="America">America</option>
         <option class="option" value="Asia">Asia</option>
         <option class="option" value="Europe">Europe</option>
@@ -43,9 +45,10 @@
       </select>
     </div>
     <div>
-      <ul class="list  item">
-
-      </ul>
+      <ul class="list item"></ul>
+      <button class="top">
+        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 404 511.5"><path fill-rule="currentColor" d="m219.24 72.97.54 438.53h-34.95l-.55-442.88L25.77 241.96 0 218.39 199.73 0 404 222.89l-25.77 23.58z"/></svg>
+      </button>
     </div>
   </main>
   <script src="./app.js"></script>

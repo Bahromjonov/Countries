@@ -34,7 +34,6 @@ const showCountries = (countries) => {
 
     const flagDiv = document.createElement('div');
     flagDiv.classList.add('flag');
-    flagDiv.style.marginBottom = '24px';
     const flagImg = document.createElement('img');
     flagImg.src = country.flags.svg;
     flagImg.alt = `${country.name.common} flag`;
@@ -47,11 +46,12 @@ const showCountries = (countries) => {
     infoDiv.classList.add('info');
     infoDiv.style.paddingBottom = '46px';
     infoDiv.style.paddingLeft = '24px';
+    infoDiv.style.paddingTop = '24px';
+
     infoDiv.style.borderRadius = '8px';
     li.appendChild(infoDiv);
 
     const countryName = document.createElement('h3');
-    countryName.style.marginBottom = '16px'
     countryName.classList.add('still')
     const countryNameText = document.createTextNode(country.name.common);
     countryName.appendChild(countryNameText);
@@ -112,6 +112,8 @@ elRegionSelect.addEventListener('change', () => {
     filterByRegion(selectedRegion);
   }
 });
+const btn = document.querySelector('.top');
+const logo = document.querySelector('.logoo')
 
 // Dark Mode hodisasi
 elDarkMode.addEventListener('click', () => {
@@ -119,5 +121,26 @@ elDarkMode.addEventListener('click', () => {
   elSearch.classList.toggle('search-bg');
   elRegionSelect.classList.toggle('dark-mode');
   elDarkMode.classList.toggle('dark-mode');
-  infoDiv.classList.toggle('search-bg ')
+  infoDiv.classList.toggle('card-bg ')
 });
+
+
+
+btn.addEventListener('scroll', () =>{
+    if(this.window.scrollY > 500){
+        btn.style.display = 'block'
+    }else{
+        btn.style.display = 'none'
+    }
+})
+
+btn.addEventListener('click',() => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+})
+  
+
+
