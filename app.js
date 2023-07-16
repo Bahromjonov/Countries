@@ -74,7 +74,7 @@ const showAllCountries = () => {
   showCountries(countriesData);
 };
 
-// Bölgelere göre davlatlarni ko'rsatish
+
 const filterByRegion = (region) => {
   const filteredCountries = countriesData.filter((country) =>
     country.region.includes(region)
@@ -102,7 +102,7 @@ elSearch.addEventListener('input', () => {
   });
 });
 
-// Bölgelerin seçimi
+
 elRegionSelect.addEventListener('change', () => {
   const selectedRegion = elRegionSelect.value;
 
@@ -115,7 +115,7 @@ elRegionSelect.addEventListener('change', () => {
 const btn = document.querySelector('.top');
 const logo = document.querySelector('.logoo')
 
-// Dark Mode hodisasi
+// Dark Mode 
 elDarkMode.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
   elSearch.classList.toggle('search-bg');
@@ -124,7 +124,7 @@ elDarkMode.addEventListener('click', () => {
   infoDiv.classList.toggle('card-bg ')
 });
 
-
+// Top
 btn.addEventListener('scroll', () =>{
     if(this.window.scrollY > 500){
         btn.style.display = 'block'
