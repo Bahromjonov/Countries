@@ -106,7 +106,6 @@ elSearch.addEventListener('input', () => {
   });
 });
 
-
 elRegionSelect.addEventListener('change', () => {
   const selectedRegion = elRegionSelect.value;
 
@@ -118,7 +117,7 @@ elRegionSelect.addEventListener('change', () => {
 });
 
 const btn = document.querySelector('.top');
-console.log(btn);
+
 const logo = document.querySelector('.logoo')
 const elHeader = document.querySelector('.header-bg')
 const elSelect = document.querySelector('.main-select')
@@ -136,12 +135,12 @@ elDarkMode.addEventListener('click', () => {
   // elHeader.classList.toggle('header-bg')
   elSelect.classList.toggle('search-bg')
   countryName.classList.toggle('oq')
-  ikki.style.backgroundColor = 'red'
-  ikki.style.boxShadow = '0px 0px 7px 2px rgba(0, 0, 0, 0.03)'
+  elHeader.classList.toggle('bg')
+  elSearch.classList.add('inputt')
 });
 // Top
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 500) {
+  if (window.scrollY > 300) {
     btn.style.display = 'block';
   } else {
     btn.style.display = 'none';
@@ -155,6 +154,17 @@ btn.addEventListener('click', () => {
     behavior: 'smooth',
   });
 });
-  
+  // Scroll
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('.header-bg');
+  const hero = document.querySelector('.hero');
+  const heroCard = hero.getBoundingClientRect();
+
+  if (heroCard.top <= 0) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
 
 
