@@ -29,9 +29,10 @@ const showCountries = (countries) => {
     const li = document.createElement('li');
     li.classList.add('none');
     li.classList.add('card');
-   
     elList.appendChild(li);
-
+    
+    const div = document.createElement('div');
+    
     const flagDiv = document.createElement('div');
     flagDiv.classList.add('flag');
     const flagImg = document.createElement('img');
@@ -40,16 +41,18 @@ const showCountries = (countries) => {
     flagImg.style.borderTopRadius = '8px';
     flagImg.style.width = '100%';
     flagDiv.appendChild(flagImg);
-    li.appendChild(flagDiv);
-
+    div.appendChild(flagDiv);
+    
     const infoDiv = document.createElement('div');
     infoDiv.classList.add('info');
     infoDiv.style.paddingBottom = '46px';
     infoDiv.style.paddingLeft = '24px';
     infoDiv.style.paddingTop = '24px';
-
     infoDiv.style.borderRadius = '8px';
-    li.appendChild(infoDiv);
+    div.appendChild(infoDiv);
+    
+    li.appendChild(div);
+    
 
     const countryName = document.createElement('h3');
     countryName.classList.add('still')
@@ -134,6 +137,8 @@ elDarkMode.addEventListener('click', () => {
   // elHeader.classList.toggle('header-bg')
   elSelect.classList.toggle('search-bg')
   countryName.classList.toggle('oq')
+  ikki.style.backgroundColor = 'red'
+  ikki.style.boxShadow = '0px 0px 7px 2px rgba(0, 0, 0, 0.03)'
 });
 // Top
 window.addEventListener('scroll', () => {

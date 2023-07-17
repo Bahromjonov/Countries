@@ -85,18 +85,18 @@ body {
 
 .search-icon {
   position: absolute;
-  top: 35%;
+  top: 15px;
   left: 10px;
   padding-left: 32px;
   border-radius: 8px;
 }
 
 .search {
+  width: 100%;
   padding-left: 80px;
   border: 0;
-  padding-bottom: 18px;
-  padding-top: 18px;
-  width: 100%;
+   padding-bottom: 18px; 
+   padding-top: 18px;
   max-width: 480px;
   display: inline-block;
   border-radius: 5px;
@@ -144,9 +144,10 @@ body {
   font-weight: 600;
   line-height: 16px;
   word-wrap: break-word;
+}
+.data:not(:last-child){
   margin-bottom: 10px;
 }
-
 .none {
   width: 100%;
   max-width: 230px;
