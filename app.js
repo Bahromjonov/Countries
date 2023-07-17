@@ -4,7 +4,7 @@ const elSearch = document.querySelector('.search');
 const elRegionSelect = document.querySelector('.main-select');
 const elList = document.querySelector('.list');
 
-// API URL
+// API 
 const api = 'https://restcountries.com/v3.1/all';
 
 // Davlatlar ma'lumotlarini saqlash uchun massiv
@@ -166,5 +166,3 @@ window.addEventListener('scroll', function () {
     header.classList.remove('sticky');
   }
 });
-
-
