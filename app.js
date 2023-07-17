@@ -52,7 +52,6 @@ const showCountries = (countries) => {
     div.appendChild(infoDiv);
     
     li.appendChild(div);
-    
 
     const countryName = document.createElement('h3');
     countryName.classList.add('still')
