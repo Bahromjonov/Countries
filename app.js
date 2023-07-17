@@ -1,7 +1,7 @@
 // Elementlarni tanlash
 const elDarkMode = document.querySelector('.header-btn');
 const elSearch = document.querySelector('.search');
-const elRegionSelect = document.querySelector('.hero-select');
+const elRegionSelect = document.querySelector('.main-select');
 const elList = document.querySelector('.list');
 
 // API URL
@@ -112,8 +112,12 @@ elRegionSelect.addEventListener('change', () => {
     filterByRegion(selectedRegion);
   }
 });
+
 const btn = document.querySelector('.top');
 const logo = document.querySelector('.logoo')
+const elHeader = document.querySelector('.header-bg')
+const elSelect = document.querySelector('.main-select')
+const elLogo = document.querySelector('.logo')
 
 // Dark Mode 
 elDarkMode.addEventListener('click', () => {
@@ -121,7 +125,12 @@ elDarkMode.addEventListener('click', () => {
   elSearch.classList.toggle('search-bg');
   elRegionSelect.classList.toggle('dark-mode');
   elDarkMode.classList.toggle('dark-mode');
-  infoDiv.classList.toggle('card-bg ')
+  elDarkMode.classList.toggle('bg-transparent')
+  elLogo.classList.toggle('oq')
+  elHeader.classList.toggle('header-bgg')
+  // elHeader.classList.toggle('header-bg')
+  elSelect.classList.toggle('search-bg')
+  countryName.classList.toggle('oq')
 });
 
 // Top
