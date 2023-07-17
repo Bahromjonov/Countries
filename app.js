@@ -60,11 +60,13 @@ const showCountries = (countries) => {
     const capital = document.createElement('p');
     
     capital.textContent = `Capital: ${country.capital?.[0] || 'N/A'}`;
+    capital.classList.add('data')
     infoDiv.appendChild(capital);
 
     const population = document.createElement('p');
    
     population.textContent = `Population: ${country.population?.toLocaleString() || 'N/A'}`;
+   population.classList.add('data')
     infoDiv.appendChild(population);
   });
 };
@@ -114,6 +116,7 @@ elRegionSelect.addEventListener('change', () => {
 });
 
 const btn = document.querySelector('.top');
+console.log(btn);
 const logo = document.querySelector('.logoo')
 const elHeader = document.querySelector('.header-bg')
 const elSelect = document.querySelector('.main-select')
@@ -132,23 +135,22 @@ elDarkMode.addEventListener('click', () => {
   elSelect.classList.toggle('search-bg')
   countryName.classList.toggle('oq')
 });
-
 // Top
-btn.addEventListener('scroll', () =>{
-    if(this.window.scrollY > 500){
-        btn.style.display = 'block'
-    }else{
-        btn.style.display = 'none'
-    }
-})
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 500) {
+    btn.style.display = 'block';
+  } else {
+    btn.style.display = 'none';
+  }
+});
 
-btn.addEventListener('click',() => {
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
-})
+btn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
+});
   
 
 
